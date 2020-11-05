@@ -16,7 +16,7 @@ lineReader.on('line', function (line) {
 lineReader.on('close', async function () {
   for(var urlIndex = 0; urlIndex < urls.length; urlIndex++) {
     const result = await getLighthouse(urls[urlIndex]);
-    fs.appendFileSync('reports/' + outputFilename, result);
+    fs.appendFileSync(outputFilename, result);
   };
 });
 
