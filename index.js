@@ -9,7 +9,6 @@ var outputFilename = 'report.tsv'
 var urls = [];
 
 lineReader.on('line', function (line) {
-  console.log('Line from file:', line);
   urls.push(line);
 });
 
